@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature Convertor</title>
+        <link rel="website icon" href="./tempicon.png">
+        <link rel="stylesheet" href="./temperature-css.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    </head>
+    <body >
+        <center>
+        <h1>Temperature Converter</h1></center>
+        <div class="main" style="margin-top: 0px; " >
+        <div class="ctof card" style="margin-left: 50px; margin-top:150px; color: black; background: linear-gradient(85deg, rgb(138,208,206), rgba(189,247,255));">
+            <h3>Celsius to Fahrenheit (C to F)</h3><hr width="280px" style="color: black;">
+            <label>Celsius: </label>
+            <input id="cel1" onclick="ctof(this.value)" onchange="ctof(this.value)" type="number" placeholder="Enter Celsius Value"><br>
+            <label>Fahrenheit: </label>
+            <span id="fah1"></span><br>
+            <button class="btn btn-primary btn-sm" style="background-color:  #4b595e;">Convert</button>
+        </div>
+        <div class="ftoc card"style="color: black; background: linear-gradient(85deg, rgb(138,208,206), rgba(189,247,255));margin-top:150px; ">
+            <h3>Fahrenheit to Celsius (F to C)</h3><hr width="280px" style="color: black;">
+            <label>Fahrenheit:</label>
+            <input id="fah2" onclick="ftoc(this.value)" onchange="ftoc(this.value)"  placeholder="Enter Fahrenheit Value"><br>
+            <label>Celsius:</label>
+            <span id="cel2"></span><br>
+            <button class="btn btn-primary btn-sm" style="background-color: #4b595e;" >Convert</button>
+        </div></div>
+        <!-- <footer>
+            <p><strong>Designed By:</strong> <i>G.G.S.Harshitha</i></p>
+        </footer> -->
+        <script>
+            function ctof(n){
+                n=parseFloat(n);
+                document.getElementById('fah1').innerHTML=n*(9/5)+32+" &deg;F";
+            }
+            function ftoc(n){
+                n=parseFloat(n);
+                document.getElementById('cel2').innerHTML=(n-32)*5/9+" &deg;C";
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
